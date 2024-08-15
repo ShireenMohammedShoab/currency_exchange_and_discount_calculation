@@ -28,14 +28,14 @@ public class SecurityConfig {
 
 	@SuppressWarnings({ "deprecation", "removal" })
 	@Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+	SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.csrf().disable().authorizeRequests().requestMatchers("/api/**").permitAll().anyRequest()
 				.authenticated().and().httpBasic();
 		return httpSecurity.build();
 	}
 
 	@Bean
-	public AuthenticationManager authenticationManager(UserDetailsService userDetailsService,
+	AuthenticationManager authenticationManager(UserDetailsService userDetailsService,
 			PasswordEncoder passwordEncoder) {
 		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
 		authenticationProvider.setUserDetailsService(userDetailsService);
@@ -47,7 +47,7 @@ public class SecurityConfig {
 
 	@SuppressWarnings("deprecation")
 	@Bean
-	public UserDetailsService userDetailsService() {
+	UserDetailsService userDetailsService() {
 		UserDetails userDetails = User.withDefaultPasswordEncoder().username(user).password(password).roles("USER")
 				.build();
 
@@ -55,7 +55,7 @@ public class SecurityConfig {
 	}
 
 	@Bean
-	public PasswordEncoder passwordEncoder() {
+	PasswordEncoder passwordEncoder() {
 		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
 	}
 }

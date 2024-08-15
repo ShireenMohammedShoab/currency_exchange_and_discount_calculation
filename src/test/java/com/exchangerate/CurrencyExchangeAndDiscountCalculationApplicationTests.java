@@ -47,7 +47,7 @@ class CurrencyExchangeAndDiscountCalculationApplicationTests {
 		//Bill bill = new Bill("employee", FALSE, 120, "USD", "EUR"); // Bill only for  Non- Grocery Items		
 		double result = billCalculationService.calculateDiscount(bill);
 		logger.info("---------- UserType Employee whose total payable amount is {}: ----------", result);
-		assertEquals(Double.valueOf(146.0), result);
+		assertEquals(Double.valueOf(138.7), result);
 	}
 
 	/**
@@ -75,7 +75,7 @@ class CurrencyExchangeAndDiscountCalculationApplicationTests {
 		Bill bill = new Bill("affiliate", items, "USD", "EUR");
 		double result = billCalculationService.calculateDiscount(bill);
 		logger.info("---------- UserType Affiliate whose total payable amount is {}: ----------", result);
-		assertEquals(Double.valueOf(145.0), result);
+		assertEquals(Double.valueOf(142.5), result);
 	}
 	
 
@@ -104,7 +104,7 @@ class CurrencyExchangeAndDiscountCalculationApplicationTests {
 		Bill bill = new Bill("affiliate", items , "USD", "EUR");
 		double result = billCalculationService.calculateTotalPayableAmount(bill);
 		logger.info("---------- Calculate the final payable amount in the target currency after applying the applicable discounts. {}: ----------", result);
-		assertEquals(Double.valueOf(72.62152), result);
+		assertEquals(Double.valueOf(68.990444), result);
 	}
 	
 }

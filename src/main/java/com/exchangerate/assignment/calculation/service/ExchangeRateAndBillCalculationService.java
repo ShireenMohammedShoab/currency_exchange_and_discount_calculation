@@ -34,19 +34,19 @@ public class ExchangeRateAndBillCalculationService {
 				discountAmount = switch (bill.userType().toLowerCase()) {
 				case "employee" -> totalAmount * 0.30;
 				case "affiliate" -> totalAmount * 0.10;
-				case "oldcustomer" -> totalAmount * 0.50;
+				case "oldcustomer" -> totalAmount * 0.5;
 				default -> 0;
 				};
 			} else {
 			// Apply $5 discount for every $100 for grocery items
 				extraFivePercentOffOnGroceryItems = getTotalAmountForGroceryItems
-						- Math.floor(getTotalAmountForGroceryItems / 100) * 5;
+						- (getTotalAmountForGroceryItems / 100) * 5;
 			}
 		}
 
 		// Apply $5 discount for every $100 on the discounted amount for non-grocery
 		// items
-		double extraFiveDiscount = Math.floor(discountAmount / 100) * 5;
+		double extraFiveDiscount = (discountAmount / 100) * 5;
 		return (discountAmount + extraFivePercentOffOnGroceryItems) - extraFiveDiscount;
 	}
 
