@@ -44,7 +44,8 @@ There are several ways to run a Spring Boot application on your local machine.
   
 2. Run through command line 
 	1. GO to the directory of project where pom.xml exists in windows
-	2. mvn clean install OR  mvn spring-boot:run
+	2. mvn clean install
+        3. mvn spring-boot:run
 3. Run as executable Runnable JAR 
         1. Cmd
         2. Go to path where currency_exchange_and_discount_calculation-0.0.1-SNAPSHOT.jar file present
@@ -67,7 +68,8 @@ o	The endpoint should return the net payable amount in the specified target curr
 Run Project via Command Line:
 ====================================
 	1. GO to the directory of project where pom.xml exists in windows
-	2. mvn clean install OR  mvn spring-boot:run
+	2. mvn clean install
+        3. mvn spring-boot:run
 
 NOTE: 
   1. Change isGrocery as "true" to test use case "The percentage-based discounts do not apply to groceries."
