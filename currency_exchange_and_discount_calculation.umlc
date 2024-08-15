@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<umlmark-class version="0.8.1" icons="true" show-relationships="true" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-rel="true" router="FAN">  
+  <class id="1" language="java" name="com.exchangerate.CurrencyExchangeAndDiscountCalculationApplication" 
+    project="currency_exchange_and_discount_calculation" 
+    file="/currency_exchange_and_discount_calculation/src/main/java/com/exchangerate/CurrencyExchangeAndDiscountCalculationApplication.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="96" width="499" x="793" y="37"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.exchangerate.assignment.calculation.controller.BillCalculatorController" 
+    project="currency_exchange_and_discount_calculation" 
+    file="/currency_exchange_and_discount_calculation/src/main/java/com/exchangerate/assignment/calculation/controller/BillCalculatorController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="336" x="417" y="37"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" 
+    name="com.exchangerate.assignment.calculation.service.ExchangeRateAndBillCalculationService" 
+    project="currency_exchange_and_discount_calculation" 
+    file="/currency_exchange_and_discount_calculation/src/main/java/com/exchangerate/assignment/calculation/service/ExchangeRateAndBillCalculationService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="378" x="417" y="293"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.exchangerate.web.security.SecurityConfig" 
+    project="currency_exchange_and_discount_calculation" 
+    file="/currency_exchange_and_discount_calculation/src/main/java/com/exchangerate/web/security/SecurityConfig.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="216" width="626" x="1332" y="37"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.exchangerate.assignment.calculation.response.CurrencyRateResponse" 
+    project="currency_exchange_and_discount_calculation" 
+    file="/currency_exchange_and_discount_calculation/src/main/java/com/exchangerate/assignment/calculation/response/CurrencyRateResponse.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="336" x="41" y="37"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
+  <association id="6">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="7" name="service"/>      
+      <multiplicity id="8" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-attribute resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" 
+    sort="true" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="false"/>    
+    <operations public="true" package="true" protected="true" private="true" static="false"/>  
+  </classifier-attribute>  
+  <association-attribute labels="true" multiplicity="true"/>
+</umlmark-class>
